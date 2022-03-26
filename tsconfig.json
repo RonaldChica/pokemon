@@ -19,7 +19,9 @@
     "lib": ["es2018", "dom"],
     "paths": {
       "@pokemon/*": ["src/app/pokemon/*"],
-      "@shared/*": ["src/app/shared/*"]
+      "@shared/*": ["src/app/shared/*"],
+      "@environments/*": ["src/environments/*"],
+      "@assets/*": ["src/assets/*"]
     }
   },
   "angularCompilerOptions": {
