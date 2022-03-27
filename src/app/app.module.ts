@@ -5,7 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { NgSelectModule } from '@ng-select/ng-select';
 
-import { PokemonModule } from '@pokemon/pokemon.module';
+import { PokemonModule } from '@modules/pokemon/pokemon.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

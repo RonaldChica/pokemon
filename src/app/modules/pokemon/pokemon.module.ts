@@ -7,9 +7,9 @@ import { NgSelectModule } from '@ng-select/ng-select';
 
 import { SharedModule } from '@shared/shared.module';
 
-import { PokemonRoutingModule } from '@pokemon/pokemon-routing.module';
-import { EditComponent } from '@pokemon/edit/edit.component';
-import { ListComponent } from '@pokemon/list/list.component';
+import { PokemonRoutingModule } from '@modules/pokemon/pokemon-routing.module';
+import { EditComponent } from '@modules/pokemon/edit/edit.component';
+import { ListComponent } from '@modules/pokemon/list/list.component';
 
 @NgModule({
   declarations: [EditComponent, ListComponent],

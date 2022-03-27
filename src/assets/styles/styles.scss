@@ -5,6 +5,7 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~@ng-select/ng-select/themes/default.theme.css";
+@import '~bootstrap/scss/bootstrap';
 
 /* Set a style for the buttons*/
 button {
@@ -39,5 +40,3 @@ button:hover {
 .f-22 {
   font-size: 22px !important;
 }
-
-@import '../node_modules/bootstrap/scss/bootstrap'

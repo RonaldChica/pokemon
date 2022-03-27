@@ -7,7 +7,7 @@ import { Pokemon } from '@shared/interfaces/pokemon';
 import { PokemonService } from '@shared/services/pokemon.service';
 import { NotificationService } from '@shared/services/notification.service';
 
-import { EditComponent } from '@pokemon/edit/edit.component';
+import { EditComponent } from '@modules/pokemon/edit/edit.component';
 
 @Component({
   selector: 'app-list',
@@ -49,10 +49,6 @@ export class ListComponent implements OnInit, OnDestroy {
   keyUpEnter(evt: any) {
     const { value }: { value: string } = evt.target;
     this.listItems$.next(value);
-  }
-
-  setDefaultPic(row: Pokemon) {
-    row.image = 'assets/img/default-pokemon.jpg';
   }
 
   edit(row?: Pokemon) {

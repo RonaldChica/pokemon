@@ -1,0 +1,41 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "ignorePatterns": [
+    "public/*",
+    ".cache/*",
+    "node_modules/*",
+    "__test__/*",
+    "__mocks__/*",
+    "test.ts"
+  ],
+  "globals": {
+    "angular": true,
+    "module": true,
+    "inject": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["angular", "@typescript-eslint"],
+  "settings": {
+    "import/resolver": {
+      "alias": [
+        ["@modules/*", "src/app/modules/*"],
+        ["@shared/*", "src/app/shared/*"],
+        ["@environments/*", "src/environments/*"],
+        ["@assets/*", "src/assets/*"]
+      ]
+    }
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "angular/file-name": 0,
+    "no-unused-vars": 0,
+    "no-undef": 0
+  }
+}

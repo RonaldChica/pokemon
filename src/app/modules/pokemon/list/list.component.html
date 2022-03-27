@@ -50,7 +50,6 @@
             <img
               [src]="pokemon.image"
               class="mr-2"
-              (error)="setDefaultPic(pokemon)"
               style="width: 40px"
             />
           </td>
@@ -82,7 +81,6 @@
     <ng-template #templateRef>
       <tr class="loading">
         <td colspan="6" class="text-center font-weight-bold text-primary">
-          <img src="assets/img/undraw_loading.svg" class="img-loading mt-3" />
           <br />
           Cargando...
         </td>
