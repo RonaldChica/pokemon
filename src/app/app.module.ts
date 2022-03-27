@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 import { PokemonModule } from '@pokemon/pokemon.module';
 
@@ -19,7 +20,8 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     NgbModule,
     PokemonModule,
-    NgxSliderModule
+    NgxSliderModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
