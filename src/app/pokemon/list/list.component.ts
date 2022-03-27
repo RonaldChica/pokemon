@@ -79,6 +79,7 @@ export class ListComponent implements OnInit, OnDestroy {
           timer: 3000,
         });
       });
+      this.listItems$.next()
     });
   }
 
@@ -98,6 +99,7 @@ export class ListComponent implements OnInit, OnDestroy {
             timer: 3000,
           });
         });
+        this.listItems$.next()
       });
   }
 }

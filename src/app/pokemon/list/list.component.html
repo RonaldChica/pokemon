@@ -16,8 +16,7 @@
       </div>
       <div>
         <button
-          class="btn btn-sm btn-primary"
-          style="width: 160px"
+          class="btn btn-lg btn-primary"
           (click)="edit()"
         >
           <icofont ico="icofont-plus f-18"></icofont>
@@ -31,9 +30,11 @@
     <thead>
       <tr>
         <th class="text-center" scope="col">Nombre</th>
+        <th class="text-center" scope="col">Tipo</th>
         <th class="text-center" scope="col">Imagen</th>
         <th class="text-center" scope="col">Ataque</th>
         <th class="text-center" scope="col">Defensa</th>
+        <th class="text-center" scope="col">Hp</th>
         <th class="text-center" scope="col">Acciones</th>
       </tr>
     </thead>
@@ -43,6 +44,9 @@
           <td>
             {{ pokemon.name | titlecase }}
           </td>
+          <td>
+            {{pokemon.type | uppercase}}
+          </td>
           <td class="text-center">
             <img
               [src]="pokemon.image"
@@ -51,11 +55,14 @@
               style="width: 40px"
             />
           </td>
-          <td class="text-center text-danger font-weight-bold">
+          <td>
             {{ pokemon.attack }}
           </td>
-          <td class="text-center text-success font-weight-bold">
+          <td>
             {{ pokemon.defense }}
+          </td>
+          <td>
+            {{ pokemon.hp }}
           </td>
           <td class="text-center">
             <icofont

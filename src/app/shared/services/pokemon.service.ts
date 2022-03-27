@@ -53,4 +53,8 @@ export class PokemonService {
   deletePokemon(idPokemon: number) {
     return this.crudService.delete(`pokemons/${idPokemon}`);
   }
+
+  getTypePokemon(): string[] {
+    return ['water', 'fire', 'normal', 'bug', 'poison'];
+  }
 }
