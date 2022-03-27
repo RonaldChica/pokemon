@@ -6,10 +6,20 @@
 @import "~bootstrap/scss/variables";
 @import "~@ng-select/ng-select/themes/default.theme.css";
 
+/* Set a style for the buttons*/
+button {
+  background-color: #6658F6 !important;
+  color: white !important;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none !important;
+  cursor: pointer;
+}
 
-$theme-colors: (
-  "primary": #6658F6,
-);
+/* Set a hover effect for the button*/
+button:hover {
+  opacity: 0.8;
+}
 
 .cursor-pointer {
   cursor: pointer;

@@ -48,7 +48,6 @@ export class ListComponent implements OnInit, OnDestroy {
 
   keyUpEnter(evt: any) {
     const { value }: { value: string } = evt.target;
-    console.log(value);
     this.listItems$.next(value);
   }
 

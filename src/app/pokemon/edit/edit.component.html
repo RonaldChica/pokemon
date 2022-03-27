@@ -2,14 +2,6 @@
   <h4 class="modal-title w-100">
     {{ titleModal }}
   </h4>
-  <button
-    type="button"
-    class="close"
-    aria-label="Close"
-    (click)="activeModal.close()"
-  >
-    <icofont ico="icofont-close"></icofont>
-  </button>
 </div>
 
 <form [formGroup]="itemForm" (ngSubmit)="submitForm()" class="form-horizontal">
@@ -99,10 +91,7 @@
         <div class="form-group">
           <label class="col-sm-2 control-label">Hp</label>
           <div class="col-sm-12">
-            <ngx-slider
-              formControlName="hp"
-              [options]="options"
-            ></ngx-slider>
+            <ngx-slider formControlName="hp" [options]="options"></ngx-slider>
           </div>
         </div>
       </div>
@@ -110,20 +99,20 @@
   </div>
   <div class="modal-footer">
     <button
-      type="reset"
-      class="btn btn-outline-danger mr-2 ml-auto"
-      (click)="activeModal.close()"
-    >
-      Cancelar
-    </button>
-    <button
       type="submit"
-      class="btn btn-primary mr-auto"
+      class="btn btn-outline-danger mr-2 ml-auto"
       [ngClass]="{ 'btn-disabled': itemForm.invalid }"
       [disabled]="itemForm.invalid"
     >
       <icofont ico="icofont-save"></icofont>
       Guardar
+    </button>
+    <button
+      type="reset"
+      class="btn btn-primary mr-auto"
+      (click)="activeModal.close()"
+    >
+      Cancelar
     </button>
   </div>
 </form>
