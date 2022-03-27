@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 import { SharedModule } from '@shared/shared.module';
 
@@ -18,6 +19,7 @@ import { ListComponent } from '@pokemon/list/list.component';
     ReactiveFormsModule,
     SharedModule,
     NgbTooltipModule,
+    NgxSliderModule
   ],
   exports: [ListComponent],
 })

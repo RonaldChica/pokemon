@@ -1,4 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$theme-colors: (
+  "primary": #6658F6,
+);
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.f-14 {
+  font-size: 14px !important;
+}
+
+.f-16 {
+  font-size: 16px !important;
+}
+
+.f-18 {
+  font-size: 18px !important;
+}
+.f-22 {
+  font-size: 22px !important;
+}
+
+@import '../node_modules/bootstrap/scss/bootstrap'

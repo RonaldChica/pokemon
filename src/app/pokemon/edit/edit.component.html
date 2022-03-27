@@ -1,1 +1,100 @@
-<p>edit works!</p>
+<div class="modal-header text-center">
+  <h4 class="modal-title w-100">
+    {{ titleModal }}
+  </h4>
+  <button
+    type="button"
+    class="close"
+    aria-label="Close"
+    (click)="activeModal.close()"
+  >
+    <icofont ico="icofont-close"></icofont>
+  </button>
+</div>
+
+<form [formGroup]="itemForm" (ngSubmit)="submitForm()" class="form-horizontal">
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Nombre:</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="name"
+              placeholder="Nombre"
+            />
+            <span
+              class="help-block text-danger"
+              *ngIf="
+                itemForm.controls['name'].touched &&
+                itemForm.controls['name'].invalid
+              "
+            >
+              Nombre es requerido
+            </span>
+          </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Imagen:</label>
+            <div class="col-sm-10">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="image"
+                placeholder="url"
+              />
+              <span
+                class="help-block text-danger"
+                *ngIf="
+                  itemForm.controls['image'].touched &&
+                  itemForm.controls['image'].invalid
+                "
+              >
+                URL de imagem es requerido
+              </span>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-5 back-range">
+          <div class="form-group">
+          <label class="col-sm-2 control-label">Ataque</label>
+          <div class="col-sm-12">
+            <ngx-slider
+              formControlName="attack"
+              [options]="options"
+            ></ngx-slider>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Defensa</label>
+          <div class="col-sm-12">
+            <ngx-slider
+              formControlName="defense"
+              [options]="options"
+            ></ngx-slider>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="reset"
+      class="btn btn-outline-danger mr-2 ml-auto"
+      (click)="activeModal.close()"
+    >
+      Cancelar
+    </button>
+    <button
+      type="submit"
+      class="btn btn-primary mr-auto"
+      [ngClass]="{ 'btn-disabled': itemForm.invalid }"
+      [disabled]="itemForm.invalid"
+    >
+      <icofont ico="icofont-save"></icofont>
+      Guardar
+    </button>
+  </div>
+</form>
